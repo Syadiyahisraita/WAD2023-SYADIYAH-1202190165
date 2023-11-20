@@ -1,7 +1,7 @@
 <?php 
 
 // (1) Hapus cookie dengan key id 
-unset($_COOKIE['id']);
+setcookie('id','',time(),'/'); //harus diberi time() dan path=>'/' agar dapat otomatis dilacak untuk dihapus cookie nya ketika logout jadi gak harus hapus manual
 // 
 
 // (2) Mulai session

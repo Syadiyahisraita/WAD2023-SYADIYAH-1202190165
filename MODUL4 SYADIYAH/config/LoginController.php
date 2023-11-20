@@ -38,7 +38,7 @@ function login($input) {
             // e. Buat kondisi untuk mengecek apakah checkbox "remember me" terisi kemudian set cookie dan isi dengan id
             if (isset($input["remember"])){
                 //set cookie dengan id
-                setcookie("id", $data['id']);
+                setcookie("id", $data['id'], time(),'/'); //harus diberi time() dan path=>'/' agar dapat otomatis dilacak untuk dihapus cookie nya ketika logout jadi gak harus hapus manual
             }
             // 
         // f. Buat kondisi else dan isi dengan variabel session dengan key message untuk meanmpilkan pesan error ketika password tidak sesuai
